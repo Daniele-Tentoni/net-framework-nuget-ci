@@ -22,3 +22,6 @@ jobs:
         
       - name: Build app for release
         run: msbuild HelloWorldNuget\HelloWorldNuget.csproj -t:rebuild -verbosity:diag -property:Configuration=Release
+
+      - name: Pack nuget
+        run: msbuild HelloWorldNuget\HelloWorldNuget.csproj -t:pack -verbosity:diag 
