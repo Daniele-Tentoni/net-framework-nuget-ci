@@ -2,6 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Daniele Tentoni</Authors>
+    <Company />
+    <Description>Share good vibes.</Description>
   </PropertyGroup>
 
 </Project>
