@@ -24,4 +24,11 @@ jobs:
         run: msbuild HelloWorldNuget\HelloWorldNuget.csproj -t:rebuild -verbosity:diag -property:Configuration=Release
 
       - name: Pack nuget
-        run: msbuild HelloWorldNuget\HelloWorldNuget.csproj -t:pack -verbosity:diag 
+        run: msbuild HelloWorldNuget\HelloWorldNuget.csproj -t:pack -verbosity:diag
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: nuget-package
+          path: HelloWorldNuget\HelloWorldNuget\bin\Debug\HelloWorldNuget.*.*.*.nupkg
+          retention-days: 1
