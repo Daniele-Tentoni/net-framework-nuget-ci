@@ -30,5 +30,15 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: nuget-package
-          path: HelloWorldNuget\HelloWorldNuget\bin\Debug\HelloWorldNuget.*.*.*.nupkg
+          path: ./*/bin/Release/*.nupkg
           retention-days: 1
+
+  push:
+    
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 3.1.x
