@@ -34,6 +34,7 @@ jobs:
           retention-days: 1
 
   push:
+    needs: [build]
     runs-on: ubuntu-latest
     steps:
       - name: Setup dotnet
