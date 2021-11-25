@@ -1,25 +1,25 @@
 name: Build Web App
- 
+
 on: [push]
- 
+
 jobs:
   build:
- 
+
     runs-on: windows-latest
- 
+
     steps:
       - uses: actions/checkout@v2
         name: Checkout Code
-        
+
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v1.1
-        
+
       - name: Setup NuGet
         uses: NuGet/setup-nuget@v1.0.5
-       
+
       - name: Restore NuGet Packages
         run: nuget restore HelloWorldNuget.sln
-        
+
       - name: Build app for release
         run: msbuild HelloWorldNuget\HelloWorldNuget.csproj -t:rebuild -verbosity:diag -property:Configuration=Release
 
@@ -34,9 +34,7 @@ jobs:
           retention-days: 1
 
   push:
-    
     runs-on: ubuntu-latest
-
     steps:
       - name: Setup dotnet
         uses: actions/setup-dotnet@v1
