@@ -47,7 +47,7 @@ jobs:
 
       - name: Push to Nuget Repo
         run: |
-          for f in ./*/bin/Release/*.nupkg
+          for f in ./**/*.nupkg
           do
             dotnet nuget push $f -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
           done
