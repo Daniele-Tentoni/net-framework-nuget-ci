@@ -18,4 +18,4 @@ jobs:
         run: msbuild HelloWorldNuget.Framework.Tests\HelloWorldNuget.Framework.Tests.csproj -t:rebuild -property:Configuration=Release
 
       - name: Test application
-        run: mstest /testcontainer:HelloWorldNuget.Framework.Tests\bin\Release\HelloWorldNuget.Framework.Tests.dll
+        run: '& "$(vswhere -property installationPath)\Common7\IDE\MSTest.exe" /testcontainer:HelloWorldNuget.Framework.Tests\bin\Release\HelloWorldNuget.Framework.Tests.dll'
