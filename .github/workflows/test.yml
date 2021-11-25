@@ -15,7 +15,7 @@ jobs:
         run: nuget restore HelloWorldNuget.sln
 
       - name: Build app and tests for release
-        run: msbuild HelloWorldNuget\HelloWorldNuget.sln -t:rebuild -property:Configuration=Release
+        run: msbuild HelloWorldNuget.Framework.Tests\HelloWorldNuget.Framework.Tests.csproj -t:rebuild -property:Configuration=Release
 
       - name: Test application
         run: mstest /testcontainer:HelloWorldNuget.Framework.Tests\bin\Release\HelloWorldNuget.Framework.Tests.dll
