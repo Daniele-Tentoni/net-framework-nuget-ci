@@ -40,3 +40,14 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: 3.1.x
+
+      - name: Download all workflow run artifacts
+        uses: actions/download-artifact@v2
+
+      - name: Push to Nuget Repo
+        run: |
+          for f in ./*/bin/Release/*.nupkg
+          do
+            dotnet nuget push $f -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
+          done
+        shell: bash
