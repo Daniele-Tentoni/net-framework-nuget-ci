@@ -3,9 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldNuget", "HelloWorldNuget\HelloWorldNuget.csproj", "{69BC41ED-7E82-43C9-91CB-F5DA0D987F1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorldNuget", "HelloWorldNuget\HelloWorldNuget.csproj", "{69BC41ED-7E82-43C9-91CB-F5DA0D987F1D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C6958013-4417-456E-872F-95487B55539B}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{F2B84A67-1D9D-48FA-A76F-AD8C61712468}"
 	ProjectSection(SolutionItems) = preProject
@@ -17,6 +20,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{21E1
 		.github\dependabot.yml = .github\dependabot.yml
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldFramework", "HelloWorldFramework\HelloWorldFramework.csproj", "{7E255670-8423-4D90-9A2C-A57485FBA90D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldCore", "HelloWorldCore\HelloWorldCore.csproj", "{7278AC49-97D9-4FCF-8685-FA0E23146DC0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +34,14 @@ Global
 		{69BC41ED-7E82-43C9-91CB-F5DA0D987F1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69BC41ED-7E82-43C9-91CB-F5DA0D987F1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69BC41ED-7E82-43C9-91CB-F5DA0D987F1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E255670-8423-4D90-9A2C-A57485FBA90D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E255670-8423-4D90-9A2C-A57485FBA90D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E255670-8423-4D90-9A2C-A57485FBA90D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E255670-8423-4D90-9A2C-A57485FBA90D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7278AC49-97D9-4FCF-8685-FA0E23146DC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7278AC49-97D9-4FCF-8685-FA0E23146DC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7278AC49-97D9-4FCF-8685-FA0E23146DC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7278AC49-97D9-4FCF-8685-FA0E23146DC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
