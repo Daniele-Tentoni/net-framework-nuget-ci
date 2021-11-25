@@ -1,11 +1,16 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <Authors>Daniele Tentoni</Authors>
-    <Company />
-    <Description>Share good vibes.</Description>
-    <PackageId>Wedo-$(AssemblyName)</PackageId>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<Authors>Daniele Tentoni</Authors>
+		<Company />
+		<Description>Share good vibes.</Description>
+		<PackageId>Wedo-$(AssemblyName)</PackageId>
+		<PackageVersion>1.1.0</PackageVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="System.Collections" Version="4.3.0" />
+	</ItemGroup>
 
 </Project>
