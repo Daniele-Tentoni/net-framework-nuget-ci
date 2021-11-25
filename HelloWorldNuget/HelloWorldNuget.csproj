@@ -5,6 +5,7 @@
     <Authors>Daniele Tentoni</Authors>
     <Company />
     <Description>Share good vibes.</Description>
+    <PackageId>Wedo-$(AssemblyName)</PackageId>
   </PropertyGroup>
 
 </Project>
