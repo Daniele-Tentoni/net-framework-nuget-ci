@@ -1,4 +1,4 @@
-name: Build Web App
+name: Build and Push Nuget Package
 
 on:
   push:

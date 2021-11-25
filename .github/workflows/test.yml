@@ -1,0 +1,21 @@
+name: Test nuget package
+
+on: ["push"]
+
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Add msbuild to PATH
+        uses: microsoft/setup-msbuild@v1.1
+
+      - name: Restore Nuget Packages
+        run: nuget restore HelloWorldNuget.sln
+
+      - name: Build app and tests for release
+        run: msbuild HelloWorldNuget\HelloWorldNuget.sln -t:rebuild -property:Configuration=Release
+
+      - name: Test application
+        run: mstest /testcontainer:HelloWorldNuget.Framework.Tests\bin\Release\HelloWorldNuget.Framework.Tests.dll
