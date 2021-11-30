@@ -2,7 +2,6 @@
 {
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-    using System;
     using System.Linq;
 
     [TestClass]
@@ -22,9 +21,8 @@
         }
 
         [DataTestMethod]
-        [DataRow(1)]
-        [DataRow(2)]
-        [TestMethod("Test get many real good vibes")]
+        [DataRow(1, DisplayName = "Test only one good vibe")]
+        [DataRow(2, DisplayName = "Test two good vibe")]
         public void TestGetManyRealGoodVides(int number)
         {
             // Arrange
