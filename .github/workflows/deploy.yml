@@ -46,7 +46,7 @@ jobs:
           dotnet-version: 3.1.x
 
       - name: Download all workflow run artifacts
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
 
       - name: Push to Nuget Repo
         run: |
