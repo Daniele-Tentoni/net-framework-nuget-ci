@@ -30,7 +30,7 @@ jobs:
         run: msbuild HelloWorldNuget\HelloWorldNuget.csproj -t:pack -verbosity:diag -property:Configuration=Release
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: nuget-package
           path: ./*/bin/Release/*.nupkg
