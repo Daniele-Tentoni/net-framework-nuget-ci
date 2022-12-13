@@ -15,7 +15,7 @@ jobs:
         name: Checkout Code
 
       - name: Add msbuild to PATH
-        uses: microsoft/setup-msbuild@v1.1
+        uses: microsoft/setup-msbuild@v1.3
 
       - name: Setup NuGet
         uses: NuGet/setup-nuget@v1.0.6
